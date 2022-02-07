@@ -34,3 +34,39 @@ else:
   cost_drone = weight * 14.25
 
 print("Drone Shipping: $", cost_drone)
+
+
+
+
+#or establish the prices before the eilf statements and use the "+=" function to change the values of the prices like so:
+
+#constants
+weight = 4.8
+price = 0
+reg_price = 20
+prem_price = 125
+
+#Ground Shipping
+if weight <= 2:
+  reg_price += weight*1.50
+elif weight > 2 and weight <= 6:
+  reg_price += weight*3
+elif weight > 6 and weight <= 10:
+  reg_price += weight*4
+else:
+  reg_price += weight*4.75
+
+print("Ground Shipping Price: $", reg_price)
+print("Ground Shipping Premium Price: $",prem_price)
+
+#Drone Shipping
+if weight <= 2:
+  price += weight*4.50
+elif weight > 2 and weight <= 6:
+  price += weight*9
+elif weight > 6 and weight <= 10:
+  price += weight*12
+else:
+  price += weight*14.25
+
+print("Drone Shipping Price: $",price)
